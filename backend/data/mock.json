@@ -1,0 +1,24 @@
+{
+  "ticker": [
+    {"text": "🏆 Argentina vs Brazil"},
+    {"text": "⚽ Kickoff in 18 Minutes"},
+    {"text": "🍔 Food Court C Queue 6 Minutes"},
+    {"text": "🚇 Metro Running Normally"},
+    {"text": "🌦 Weather 23°C"},
+    {"text": "🚪 Gate B Less Crowded"},
+    {"text": "♿ Accessible Route Available"}
+  ],
+  "dashboard": {
+    "weather": {"temp": "24°C", "condition": "Clear"},
+    "crowd": {"level": 75, "status": "Busy"},
+    "food": {"shortest_queue": "Food Court C", "time_mins": 5},
+    "transport": {"metro": "Normal", "taxi": "Heavy Traffic", "bus": "Delayed"},
+    "countdown": {"minutes": 18},
+    "ai_recommendation": "Avoid Gate A. Use Food Court C. Metro is fastest."
+  },
+  "map_markers": [
+    {"id": 1, "type": "Seat", "name": "Section 214", "lat": 40.7128, "lng": -74.0060, "crowd": "Low"},
+    {"id": 2, "type": "Food", "name": "Food Court C", "lat": 40.7130, "lng": -74.0055, "crowd": "Medium", "queue": "5 mins"},
+    {"id": 3, "type": "Gate", "name": "Gate B", "lat": 40.7125, "lng": -74.0065, "crowd": "Low"}
+  ]
+}
