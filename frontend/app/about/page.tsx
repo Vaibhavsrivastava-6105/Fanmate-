@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Cpu, Globe, Rocket } from "lucide-react";
+import { Code2, Cpu, Rocket } from "lucide-react";
 
 export default function AboutPage() {
   return (

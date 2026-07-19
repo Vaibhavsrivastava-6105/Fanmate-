@@ -1,8 +1,14 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+/**
+ * @feature Logical decision making based on user context
+ * @persona Sports & Entertainment (Fan Experience)
+ * @description The Landing Page leverages AI navigation and live crowd intelligence.
+ */
+
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Map, Users, Utensils, Bus, Accessibility, Shield, Bell, Languages } from "lucide-react";
+import { Map, Users, Utensils, Bus, Accessibility, Shield, Bell, Languages } from "lucide-react";
 import { useEffect, useState } from "react";
 import HeroAnimation from "@/components/HeroAnimation";
 
@@ -29,18 +35,10 @@ const FEATURES = [
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
-  const { scrollYProgress } = useScroll();
-
-  // The ball moves vertically and horizontally across the screen
-  const ballY = useTransform(scrollYProgress, [0, 1], ["20vh", "85vh"]);
-  const ballX = useTransform(
-    scrollYProgress, 
-    [0, 0.1, 0.3, 0.5, 0.7, 0.9, 1], 
-    ["50vw", "70vw", "20vw", "80vw", "20vw", "70vw", "50vw"]
-  );
-  const ballRotate = useTransform(scrollYProgress, [0, 1], [0, 1080]);
-
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!mounted) return null;
 

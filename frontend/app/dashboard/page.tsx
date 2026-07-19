@@ -40,9 +40,12 @@ export default function DashboardPage() {
   };
 
   useEffect(() => {
-    fetchData();
+    const timer = setTimeout(() => fetchData(), 0);
     const interval = setInterval(fetchData, 10000); // Refresh every 10s
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   const cardVariants = {
@@ -153,7 +156,7 @@ export default function DashboardPage() {
             <Bot className="w-6 h-6 text-[var(--color-primary)]" />
           </div>
           <div className="text-lg font-medium text-white leading-relaxed">
-            "{data?.ai_recommendation}"
+            &quot;{data?.ai_recommendation}&quot;
           </div>
         </motion.div>
 

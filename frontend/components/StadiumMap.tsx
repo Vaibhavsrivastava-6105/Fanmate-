@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Bot } from "lucide-react";
 import Link from "next/link";
 
 // Fix for default leaflet icons in Next.js
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -32,7 +33,7 @@ export default function StadiumMap() {
     fetch("http://localhost:8000/api/stadium/map")
       .then(res => res.json())
       .then(data => setMarkers(data))
-      .catch(e => {
+      .catch(() => {
         // Mock fallback
         setMarkers([
           { id: 1, type: "Seat", name: "Section 214", lat: 40.7128, lng: -74.0060, crowd: "Low" },
