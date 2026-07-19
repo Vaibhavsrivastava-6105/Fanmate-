@@ -11,9 +11,9 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About FanMate AI</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About FAN MATE AI</h1>
         <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-          FanMate AI is a premium, AI-powered smart stadium companion designed specifically 
+          FAN MATE AI is a premium, AI-powered smart stadium companion designed specifically 
           for football fans attending the FIFA World Cup 2026. Our goal is to provide a seamless, 
           accessible, and intelligent experience from the moment you step into the stadium.
         </p>

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "FanMate AI | Smart Stadium Companion",
+  title: "FAN MATE AI | Smart Stadium Companion",
   description: "Your AI-powered smart stadium companion for FIFA World Cup 2026.",
 };
 

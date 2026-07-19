@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <h2 className="text-slate-900 font-bold text-xl flex items-center gap-2">
             <span className="w-6 h-6 bg-[var(--color-primary)] rounded-full inline-block"></span>
-            FanMate AI
+            FAN MATE AI
           </h2>
           <p className="text-sm mt-2 max-w-sm text-slate-500">
             Your premium smart stadium companion for FIFA World Cup 2026. Powered by AI.
@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-xs mt-8 text-slate-400">
-        &copy; {new Date().getFullYear()} FanMate AI. All rights reserved.
+        &copy; {new Date().getFullYear()} FAN MATE AI. All rights reserved.
       </div>
     </footer>
   );

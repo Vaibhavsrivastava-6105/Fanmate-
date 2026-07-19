@@ -135,7 +135,7 @@ export default function LandingPage() {
             whileTap={{ scale: 0.95 }}
             className="bg-[var(--color-secondary)] text-white px-10 py-5 rounded-full font-bold text-xl transition-colors hover:bg-cyan-500"
           >
-            Launch FanMate AI
+            Launch FAN MATE AI
           </motion.button>
         </Link>
       </section>

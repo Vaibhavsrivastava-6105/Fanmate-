@@ -20,7 +20,7 @@ const SUGGESTIONS = [
 
 export default function AssistantPage() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "ai", content: "Welcome! I'm FanMate AI. Ask me anything about your stadium experience." }
+    { role: "ai", content: "Welcome! I'm FAN MATE AI. Ask me anything about your stadium experience." }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -87,11 +87,11 @@ export default function AssistantPage() {
         {/* Chat Header */}
         <div className="h-16 border-b border-[var(--color-border-subtle)] flex items-center justify-between px-6 bg-[var(--color-card)] z-10">
           <div>
-            <h2 className="font-bold text-white">FanMate AI Assistant</h2>
+            <h2 className="font-bold text-white">FAN MATE AI Assistant</h2>
             <p className="text-xs text-[var(--color-secondary)]">Online • Smart Stadium AI</p>
           </div>
           <button 
-            onClick={() => setMessages([{ role: "ai", content: "Welcome! I'm FanMate AI. Ask me anything about your stadium experience." }])}
+            onClick={() => setMessages([{ role: "ai", content: "Welcome! I'm FAN MATE AI. Ask me anything about your stadium experience." }])}
             className="p-2 hover:bg-white/5 rounded-full transition-colors text-gray-400 hover:text-[var(--color-danger)]"
           >
             <Trash2 className="w-5 h-5" />

@@ -30,7 +30,7 @@ export default function Navbar() {
             <span className="font-bold text-lg">FM</span>
           </div>
           <div>
-            <h1 className="font-bold text-xl leading-tight">FanMate AI</h1>
+            <h1 className="font-bold text-xl leading-tight">FAN MATE AI</h1>
             <p className="text-xs text-slate-500">FIFA World Cup 2026</p>
           </div>
         </Link>
