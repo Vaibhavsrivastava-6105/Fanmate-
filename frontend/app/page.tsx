@@ -45,7 +45,7 @@ export default function LandingPage() {
   if (!mounted) return null;
 
   return (
-    <div className="flex flex-col w-full overflow-x-clip bg-[var(--color-background)] relative">
+    <main className="flex flex-col w-full overflow-x-clip bg-[var(--color-background)] relative">
       
       {/* GSAP HERO SECTION */}
       <HeroAnimation />
@@ -134,6 +134,7 @@ export default function LandingPage() {
             whileHover={{ scale: 1.05, boxShadow: "0 10px 40px rgba(0,180,216,0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-[var(--color-secondary)] text-white px-10 py-5 rounded-full font-bold text-xl transition-colors hover:bg-cyan-500"
+            aria-label="Launch FAN MATE AI Assistant"
           >
             Launch FAN MATE AI
           </motion.button>
@@ -146,6 +147,6 @@ export default function LandingPage() {
           100% { transform: translateX(-50%); }
         }
       `}} />
-    </div>
+    </main>
   );
 }

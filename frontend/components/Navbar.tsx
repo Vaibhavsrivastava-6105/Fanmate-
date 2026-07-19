@@ -22,10 +22,11 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className="fixed top-0 w-full z-50 bg-glass text-[var(--color-foreground)] transition-all duration-300"
+      aria-label="Main Navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Left Section - Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group" aria-label="Go to FAN MATE AI Homepage">
           <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_15px_rgba(0,102,255,0.3)]">
             <span className="font-bold text-lg">FM</span>
           </div>
@@ -36,7 +37,7 @@ export default function Navbar() {
         </Link>
 
         {/* Center Section - Nav Links */}
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6" aria-label="Desktop Navigation">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -61,17 +62,17 @@ export default function Navbar() {
 
         {/* Right Section - Icons */}
         <div className="flex items-center gap-4 text-slate-600">
-          <button className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
+          <button aria-label="Search" className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
             <Search className="w-5 h-5 group-hover:text-[var(--color-primary)] transition-colors" />
           </button>
-          <button className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
+          <button aria-label="Change Language" className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
             <Globe className="w-5 h-5 group-hover:text-[var(--color-primary)] transition-colors" />
           </button>
-          <button className="relative p-2 hover:bg-slate-100 rounded-full transition-colors group">
+          <button aria-label="Notifications" className="relative p-2 hover:bg-slate-100 rounded-full transition-colors group">
             <Bell className="w-5 h-5 group-hover:text-[var(--color-primary)] transition-colors" />
             <span className="absolute top-2 right-2 w-2 h-2 bg-[var(--color-danger)] rounded-full animate-pulse"></span>
           </button>
-          <button className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
+          <button aria-label="User Profile" className="p-2 hover:bg-slate-100 rounded-full transition-colors group">
             <User className="w-5 h-5 group-hover:text-[var(--color-primary)] transition-colors" />
           </button>
         </div>
